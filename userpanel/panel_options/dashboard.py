@@ -20,16 +20,20 @@ def cleanfr2pwd(fr2pw,userc):
 def dash(fr2pw,userc):
     n=userc["name"]
     us=userc["username"]
+    s_var=StringVar()
     # lbl=CTkLabel(fr2pw,text="RESPAWNIX",text_color=FRAMES,font=("Pixel O10 Bott",35))
     # lbl.place(x=450,y=30)
     u=load_photo("assests/images/user.png",fr2pw,(45,45),widget="label")
-    u.place(x=550,y=28)
+    u.place(x=600,y=38)
     lbl=CTkLabel(fr2pw,text=us,text_color=FRAMES,font=("Nova Bomb SemBd",20))
-    lbl.place(y=30,x=600)
+    lbl.place(y=40,x=650)
     lbl1=CTkLabel(fr2pw,text=f"{ti} {n}",text_color=FRAMES,font=("Nova Bomb SemBd",40))
-    lbl1.place(x=50,y=30)
+    lbl1.place(x=50,y=40)
     lbl1=CTkLabel(fr2pw,text="Here is your package review",text_color=FRAMES,font=("Nova Bomb SemBd",20))
     lbl1.place(x=50,y=100)
+    entry=CTkEntry(fr2pw,fg_color=TEXTS,text_color=FRAMES,placeholder_text="search your post... ",placeholder_text_color=PLACETEXTS,border_color=PLACETEXTS,border_width=3,font=("GROSTE",15),width=200,height=50,corner_radius=16,textvariable=s_var)
+    entry.place(x=370,y=40)
+    # entry.bind("<KeyRelease>", lambda event: search(event, userc))
     cards3(fr2pw,userc)
 def cards3(fr2pw,userc):
     pack=openj()
