@@ -5,7 +5,7 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.insert(0, BASE_DIR)
 from _modules import *
-from back_panel.card1 import *
+# from back_panel.card1 import *
 TEXTS = "#5A1E2A"
 FRAMES = "#F7F1E5"
 ENTRIE = "#89977D"
@@ -24,7 +24,8 @@ def addpack(pgk):
         with open("data/packages.json","w") as file:
             json.dump(pc,file)
 def deletepack(pgk):
-    op=openj()
+    with open("data/packages.json", "r") as file:
+        op = json.load(file)
     for o in op:
         if o["tracking"]==pgk["tracking"]:
             op.remove(o)

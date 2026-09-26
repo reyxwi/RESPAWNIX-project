@@ -29,6 +29,8 @@ def remove(userc,te):
         )
         return False
     pgk=find(te.get(),userc)
+    if pgk==False:
+        return False
     rund(pgk)
     return True
    
