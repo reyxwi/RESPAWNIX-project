@@ -42,8 +42,8 @@ def buttonsfr1(fr1pw,fr2pw,userc):
     btn2.place(relx=0.5,anchor="center",y=300)
     btn3=CTkButton(fr1pw,text="Delete package",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50,command=lambda:cleanfde(fr2pw,userc))
     btn3.place(relx=0.5,anchor="center",y=370)
-    btn4=CTkButton(fr1pw,text="Search",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50)
-    btn4.place(relx=0.5,anchor="center",y=440)
+    # btn4=CTkButton(fr1pw,text="Search",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50)
+    # btn4.place(relx=0.5,anchor="center",y=440)
     
 def run(window,userc):
     # window=swindowp()
