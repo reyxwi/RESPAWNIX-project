@@ -59,22 +59,22 @@ def checkuser(username, role, password):
                         font=("Nova Bomb SemBd", 20),
                         sound="assests/sound/error.mp3",
                     )
-                    return False
-            CTkMessagebox(
-                message=f"Welcome back {name} ",
-                icon="check",
-                options="Ok.",
-                fg_color=FRAMES,
-                text_color=TEXTS,
-                button_hover_color=HOVER,
-                button_text_color=TEXTS,
-                title="Success",
-                title_color=FRAMES,
-                button_color=FRAMES,
-                corner_radius=16,
-                font=("Nova Bomb SemBd", 20),
-                sound="assests/sound/succes.mp3",
-            )
+            #         return False
+            # CTkMessagebox(
+            #     message=f"Welcome back {name} ",
+            #     icon="check",
+            #     options="Ok.",
+            #     fg_color=FRAMES,
+            #     text_color=TEXTS,
+            #     button_hover_color=HOVER,
+            #     button_text_color=TEXTS,
+            #     title="Success",
+            #     title_color=FRAMES,
+            #     button_color=FRAMES,
+            #     corner_radius=16,
+            #     font=("Nova Bomb SemBd", 20),
+            #     sound="assests/sound/succes.mp3",
+            # )
             return u
     CTkMessagebox(
         message="Access Denied!",

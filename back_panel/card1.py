@@ -42,3 +42,10 @@ def find(track,userc):
             sound="assests/sound/error.mp3",
         )
     return False
+def un(pack,userc):
+    packs=[]
+    for p in pack:
+        if p["username"]==userc["username"]:
+            if p["status"]=="unknown":
+                packs.append(p)
+    return packs

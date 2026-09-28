@@ -5,11 +5,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.insert(0, BASE_DIR)
 from _modules import *
 from options.back import load_photo
-
-FRAMEST = "#d6d8ff"
-TEXTST = "#040a1f"
-PLACETEXTS = "#6b7696"
-HOVER = "#455ea8"
+TEXTST="#353535"
+FRAMEST="#DFDDD7" 
+ENTRIE = "#E9F9DB"
+HOVER="#6F7C63"
 
 
 def repack():

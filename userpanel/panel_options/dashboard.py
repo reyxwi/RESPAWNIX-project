@@ -33,12 +33,13 @@ def dash(fr2pw,userc):
     lbl1=CTkLabel(fr2pw,text="Here is your package review",text_color=FRAMES,font=("Nova Bomb SemBd",20))
     lbl1.place(x=50,y=100)
     entry=CTkEntry(fr2pw,fg_color=TEXTS,text_color=FRAMES,placeholder_text="search your post... ",placeholder_text_color=PLACETEXTS,border_color=PLACETEXTS,border_width=3,font=("GROSTE",15),width=200,height=50,corner_radius=16,textvariable=s_var)
-    entry.place(x=370,y=40)
+    entry.place(x=390,y=40)
     entry.bind("<KeyRelease>", lambda event: se(s_var, userc,tr,event))
     tr=cards3(fr2pw,userc)
 def cards3(fr2pw,userc):
     pack=openj()
     packs=len(readj(pack,userc))
+    stu=len(un(pack,userc))
     fr1=CTkFrame(fr2pw,corner_radius=13,width=130,height=130,fg_color=TEXTS,border_color=FRAMES,border_width=3)
     fr1.place(x=30,y=170)
     fr2=CTkFrame(fr2pw,corner_radius=16,width=130,height=130,fg_color=TEXTS,border_color=FRAMES,border_width=3)
@@ -70,7 +71,7 @@ def cards3(fr2pw,userc):
     lbl4.place(y=50,x=90)
     lbl5=CTkLabel(fr3,text="",text_color=FRAMES,font=("Pixelhands",30))
     lbl5.place(y=50,x=90)
-    lbl6=CTkLabel(fr4,text="",text_color=FRAMES,font=("Pixelhands",30))
+    lbl6=CTkLabel(fr4,text=stu,text_color=FRAMES,font=("Pixelhands",30))
     lbl6.place(y=50,x=90)
     tr=treeveiw(fr2pw,userc)
     return tr

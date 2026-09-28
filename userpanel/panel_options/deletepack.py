@@ -6,11 +6,9 @@ from _modules import *
 from options.back import *
 from options.jpack import remove2
 
-TEXTS="#5A1E2A"
-FRAMES="#F7F1E5"
+TEXTS="#353535"
+FRAMES="#DFDDD7" 
 ENTRIE = "#E9F9DB"
-PLACETEXTS="#5A1E2A"
-TEXTSE = "#646B5F"
 HOVER="#6F7C63"
 def tdelpack():
     top=CTkToplevel()
