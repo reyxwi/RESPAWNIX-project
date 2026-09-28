@@ -40,9 +40,7 @@ def checkuser(username, role, password):
                         font=("Nova Bomb SemBd", 20),
                         sound="assests/sound/error.mp3",
                     )
-                    return True
-                if u["role"] == "Admin":
-                    return True
+                    return u
                 else:
                     CTkMessagebox(
                         message="You are not an admin.",

@@ -49,3 +49,8 @@ def un(pack,userc):
             if p["status"]=="unknown":
                 packs.append(p)
     return packs
+def reada(pack,userc):
+    all=[]
+    for o in pack:
+        all.append(o)
+    return all

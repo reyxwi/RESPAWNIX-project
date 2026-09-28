@@ -7,6 +7,7 @@ from options.userlog import checkuser
 from userpanel.upanel import run
 from options.users import add
 from loading_page.main import run as loading_run
+from adminpanel.apanel import run as admrun
 TEXTS = "#5A1E2A"
 FRAMES = "#F7F1E5"
 TEXTSE = "#E7F2DF"
@@ -29,7 +30,10 @@ def afterl(window,userc):
         font=("Nova Bomb SemBd", 20),
         sound="assests/sound/succes.mp3",
         )
-    run(window,userc)
+    if userc["role"]=="Admin":
+        admrun(window,userc)
+    else:
+        run(window,userc)
 def afters(window,userc):
     CTkMessagebox(
         message=f"Welcome {userc['name']}",
