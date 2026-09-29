@@ -1,117 +1,179 @@
-# RESPAWNIX 📦
+# 📦 RESPAWNIX — Package Tracker Dashboard
 
-**RESPAWNIX** is a desktop Package Tracker Dashboard built with Python and CustomTkinter.
+RESPAWNIX is a desktop **Package Tracker Dashboard** built with Python and CustomTkinter.
 
-The application provides a simple interface for managing and tracking packages with separate panels for users and administrators.
+The project provides separate panels for **Admin** and **User** roles, allowing packages to be created, tracked, searched, updated, and managed through a graphical interface.
+
+---
 
 ## ✨ Features
 
-* 🔐 Login and Sign Up system
-* 👤 User and Admin roles
-* 📦 Package management
-* 🚚 Package status tracking
-* 📊 Dashboard with package statistics
-* 📈 Package status chart
-* 🔄 Navigation between different panels
-* 🧩 Modular project structure
-* 🎨 CustomTkinter-based user interface
+### 🔐 Authentication
 
-## 📌 Package Statuses
+* User and Admin roles
+* Login and Sign Up pages
+* Role-based panel access
+* Loading screen before entering the panel
 
-Packages can be categorized into different statuses:
+### 👨‍💼 Admin Panel
 
-* **On the way**
-* **Delivered**
-* **Sent**
-* **Unknown**
+* View all packages
+* View package information in a Treeview
+* Change package status
+* Search packages
+* Dashboard package statistics
+* Status-based package management
 
-The dashboard displays the current package statistics and visualizes them using a chart.
+### 👤 User Panel
+
+* View personal packages
+* Add packages
+* Search packages
+* Delete packages
+* View package status
+* Track package information
+
+### 📊 Dashboard
+
+The dashboard displays package statistics such as:
+
+* All Packages
+* On the Way
+* Delivered
+* Sent
+* Unknown
+
+---
 
 ## 🛠️ Technologies
 
 * Python
 * CustomTkinter
-* Tkinter
-* Matplotlib
+* Tkinter / ttk
+* JSON
 * Pillow
+* Matplotlib
+* CTkMessagebox
+
+---
 
 ## 📁 Project Structure
-
 RESPAWNIX/
 │
-├── adminpanel/
-│   └── ...
+├── run.py
+├── _modules.py
 │
 ├── auth/
 │   ├── login.py
 │   ├── signin.py
 │   └── switch.py
 │
+├── admin/
+│   ├── adminpanel.py
+│   └── tree.py
+│
+├── userpanel/
+│   ├── upanel.py
+│   ├── logincon.py
+│   ├── time.py
+│   └── panel_options/
+│       ├── dashboard.py
+│       ├── addp.py
+│       ├── repack.py
+│       ├── packages.py
+│       ├── deletepack.py
+│       ├── deletere.py
+│       └── search.py
+│
+├── back_panel/
+│   ├── card1.py
+│   └── logincon.py
+│
 ├── options/
+│   ├── pack.py
+│   ├── jpack.py
 │   ├── back.py
-│   └── users.py
+│   ├── users.py
+│   └── userlog.py
 │
-├── assets/
-│   └── images/
+├── data/
+│   ├── packages.json
+│   └── role.json
 │
-├── _modules.py
-├── run.py
-├── .gitignore
-├── requirements.txt
-└── README.md
+└── assests/
 ```
+
+---
 
 ## 🚀 How to Run
 
-First, make sure Python is installed.
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Enter the project folder:
+
+```bash
+cd RESPAWNIX
+```
 
 Install the required libraries:
 
 ```bash
-pip install customtkinter matplotlib requests pillow flask
+pip install customtkinter pillow CTkMessagebox matplotlib
 ```
 
-Then run the project from the main launcher:
+Run the project from the main launcher:
 
 ```bash
 python run.py
 ```
 
-> **Important:** Run the project from `run.py` because the project uses a centralized module/import structure.
+> **Important:** Run the project using `run.py` so that the project imports and file paths work correctly.
 
-## 🎨 Interface
+---
 
-RESPAWNIX uses a custom red-themed interface with separate sections for authentication, dashboard, package management, and reports.
+## 📦 Package Statuses
 
-## 📊 Dashboard
+Packages can have different statuses:
 
-The dashboard provides an overview of package activity and displays package statistics using a graphical chart.
+```text
+unknown
+on the way
+delivered
+sent
+```
 
-The chart is generated dynamically from the package data instead of using fixed values.
+Admins can update the status of packages from the Admin Panel.
 
-## 👥 Roles
+---
 
-### User
+## 🎨 UI
 
-Users can access the user panel and view/manage their package-related information.
+RESPAWNIX uses a custom desktop interface with a purple-themed authentication section and custom dashboard components.
 
-### Admin
+The interface includes:
 
-Administrators have access to the admin panel and additional package management and reporting features.
+* CustomTkinter widgets
+* Custom fonts
+* Icons and images
+* Package cards
+* Treeviews
+* Status controls
+* Dashboard statistics
 
-## 📚 Project Purpose
-
-This project was created as a modular Python desktop application for learning and practicing:
-
-* GUI development
-* Python functions
-* Modular programming
-* File and data management
-* Authentication
-* Data visualization
+---
 
 ## 👩‍💻 Developer
 
-**Reyhane Samadi**
+**Reyhaneh Samadi**
 
-Computer Student
+Python / Computer Student
+
+---
+
+## 📌 Project Status
+
+This project is a student final project and is actively being developed.
