@@ -72,3 +72,9 @@ def readse(pack,userc):
         if o["status"]=="sent":
             se.append(o)
     return se
+def una(pack,userc):
+    packs=[]
+    for p in pack:
+        if p["status"]=="unknown":
+            packs.append(p)
+    return packs

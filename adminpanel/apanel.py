@@ -6,6 +6,7 @@ from options.back import *
 from _modules import *
 from adminpanel.dashboarda import *
 from adminpanel.status import *
+from adminpanel.chart import *
 TEXTS="#5A1E2A"
 FRAMES="#F7F1E5"
 ENTRIE="#89977D"
@@ -42,14 +43,18 @@ def chnageframe1(fr1pw):
     lbl2=CTkLabel(fr1pw,text="─────────────────────",text_color=FRAMES,font=("Arial",15),border_width=3,border_color=FRAMES)
     lbl2.place(y=150,relx=0.5,anchor="center")
 def buttonsfr1(fr1pw,fr2pw,userc,window):
+    pack=openj()
+    packs=len(reada(pack,userc))
+    stu=len(una(pack,userc))
+    on=len(readway(pack,userc))
+    de=len(readdeli(pack,userc))
+    s=len(readse(pack,userc))
     btn1=CTkButton(fr1pw,text="Dashboard",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50,command=lambda:cleanfr2pwd(fr2pw,userc))
     btn1.place(relx=0.5,anchor="center",y=230)
     btn2=CTkButton(fr1pw,text="Package",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50,command=lambda:cleanfr2(fr2pw,userc))
     btn2.place(relx=0.5,anchor="center",y=300)
-    btn3=CTkButton(fr1pw,text="Search",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50)
+    btn3=CTkButton(fr1pw,text="Report",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50,command=lambda:cleanfc(fr2pw,userc,on,de,s,stu))
     btn3.place(relx=0.5,anchor="center",y=370)
-    btn4=CTkButton(fr1pw,text="Statistics",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50)
-    btn4.place(relx=0.5,anchor="center",y=440)
 def run(window,userc):
     # window=swindowp()
     pw=spanned(window,userc)

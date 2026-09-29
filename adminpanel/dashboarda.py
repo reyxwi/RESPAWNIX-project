@@ -39,7 +39,7 @@ def dash(fr2pw,userc):
 def cards3(fr2pw,userc):
     pack=openj()
     packs=len(reada(pack,userc))
-    stu=len(un(pack,userc))
+    stu=len(una(pack,userc))
     on=len(readway(pack,userc))
     de=len(readdeli(pack,userc))
     s=len(readse(pack,userc))
