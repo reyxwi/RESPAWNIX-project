@@ -25,21 +25,21 @@ def checkuser(username, role, password):
             name = u["name"]
             if role.lower() == "admin":
                 if u["role"] == "Admin":
-                    CTkMessagebox(
-                        message=f"Welcome back {name} ",
-                        icon="check",
-                        options="Ok.",
-                        fg_color=FRAMES,
-                        text_color=TEXTS,
-                        button_hover_color=HOVER,
-                        button_text_color=TEXTS,
-                        title="Erorr",
-                        title_color=FRAMES,
-                        button_color=FRAMES,
-                        corner_radius=16,
-                        font=("Nova Bomb SemBd", 20),
-                        sound="assests/sound/error.mp3",
-                    )
+                    # CTkMessagebox(
+                    #     message=f"Welcome back {name} ",
+                    #     icon="check",
+                    #     options="Ok.",
+                    #     fg_color=FRAMES,
+                    #     text_color=TEXTS,
+                    #     button_hover_color=HOVER,
+                    #     button_text_color=TEXTS,
+                    #     title="Erorr",
+                    #     title_color=FRAMES,
+                    #     button_color=FRAMES,
+                    #     corner_radius=16,
+                    #     font=("Nova Bomb SemBd", 20),
+                    #     sound="assests/sound/error.mp3",
+                    # )
                     return u
                 else:
                     CTkMessagebox(

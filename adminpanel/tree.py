@@ -46,6 +46,10 @@ def treeveiwa(fr2pw, userc):
     t.column("status", width=100)
     icon = PhotoImage(file="assests/images/box (2).png")
     t.column("#0", width=50)
+    t.tag_configure("sent",foreground="#536e52")
+    t.tag_configure("delivered",foreground="#9c9e4e")
+    t.tag_configure("on the way",foreground="#666e80")
+    t.tag_configure("unknown",foreground="#8e6e6e")
     for r in re:
         t.insert(
             "",
@@ -59,6 +63,8 @@ def treeveiwa(fr2pw, userc):
                 r["status"],
             ),
             image=icon,
+            tags=r["status"]
         )
+     
     # t.place(relx=0.5, anchor="center", y=650, height=300, width=700)
     return t
