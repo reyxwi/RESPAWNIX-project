@@ -68,7 +68,7 @@ def cards3(fr2pw,userc):
     que=load_photo("assests/images/que.png",fr4,(35,35),widget="label",corner=30)
     que.place(y=20,x=10)
     lbl3=CTkLabel(fr1,text=packs,text_color=FRAMES,font=("Pixelhands",30))
-    lbl3.place(y=50,x=90)
+    lbl3.place(y=50,x=85)
     lbl4=CTkLabel(fr2,text=on,text_color=FRAMES,font=("Pixelhands",30))
     lbl4.place(y=50,x=90)
     lbl5=CTkLabel(fr3,text=de,text_color=FRAMES,font=("Pixelhands",30))

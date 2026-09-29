@@ -8,6 +8,7 @@ from userpanel.time import *
 from back_panel.card1 import *
 from userpanel.panel_options.treeveiw import *
 from userpanel.panel_options.search import se
+from back_panel.numbers import *
 FRAMES="#5A1E2A"
 TEXTS="#F7F1E5"
 ENTRIE="#89977D"
@@ -39,6 +40,9 @@ def dash(fr2pw,userc):
 def cards3(fr2pw,userc):
     pack=openj()
     packs=len(readj(pack,userc))
+    s=len(reada(pack,userc))
+    d=len(readd(pack,userc))
+    o=len(reado(pack,userc))
     stu=len(un(pack,userc))
     fr1=CTkFrame(fr2pw,corner_radius=13,width=130,height=130,fg_color=TEXTS,border_color=FRAMES,border_width=3)
     fr1.place(x=30,y=170)
@@ -55,7 +59,7 @@ def cards3(fr2pw,userc):
     lbl1.place(y=100,relx=0.5,anchor="center")
     lbl2=CTkLabel(fr3,text="Delivered",text_color=FRAMES,font=("Pixelhands",15))
     lbl2.place(y=100,relx=0.5,anchor="center")
-    lbl3=CTkLabel(fr4,text="Unknown",text_color=FRAMES,font=("Pixelhands",15))
+    lbl3=CTkLabel(fr4,text="sent",text_color=FRAMES,font=("Pixelhands",15))
     lbl3.place(y=100,relx=0.5,anchor="center")
     tick=load_photo("assests/images/tick.png",fr1,(35,35),widget="label",corner=30)
     tick.place(y=20,x=10)
@@ -65,13 +69,13 @@ def cards3(fr2pw,userc):
     clock.place(y=20,x=10)
     que=load_photo("assests/images/que.png",fr4,(35,35),widget="label",corner=30)
     que.place(y=20,x=10)
-    lbl3=CTkLabel(fr1,text=packs,text_color=FRAMES,font=("Pixelhands",30))
+    lbl3=CTkLabel(fr1,text=s,text_color=FRAMES,font=("Pixelhands",30))
     lbl3.place(y=50,x=90)
-    lbl4=CTkLabel(fr2,text="",text_color=FRAMES,font=("Pixelhands",30))
+    lbl4=CTkLabel(fr2,text=o,text_color=FRAMES,font=("Pixelhands",30))
     lbl4.place(y=50,x=90)
-    lbl5=CTkLabel(fr3,text="",text_color=FRAMES,font=("Pixelhands",30))
+    lbl5=CTkLabel(fr3,text=d,text_color=FRAMES,font=("Pixelhands",30))
     lbl5.place(y=50,x=90)
-    lbl6=CTkLabel(fr4,text=stu,text_color=FRAMES,font=("Pixelhands",30))
+    lbl6=CTkLabel(fr4,text=packs,text_color=FRAMES,font=("Pixelhands",30))
     lbl6.place(y=50,x=90)
     tr=treeveiw(fr2pw,userc)
     return tr
