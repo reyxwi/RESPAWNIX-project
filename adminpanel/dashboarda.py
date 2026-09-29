@@ -7,7 +7,7 @@ from options.back import *
 from userpanel.time import *
 from back_panel.card1 import *
 from adminpanel.tree import *
-from userpanel.panel_options.search import se
+from back_panela.seaacha import se
 FRAMES="#5A1E2A"
 TEXTS="#F7F1E5"
 ENTRIE="#89977D"
@@ -34,12 +34,15 @@ def dash(fr2pw,userc):
     lbl1.place(x=50,y=100)
     entry=CTkEntry(fr2pw,fg_color=TEXTS,text_color=FRAMES,placeholder_text="search your post... ",placeholder_text_color=PLACETEXTS,border_color=PLACETEXTS,border_width=3,font=("GROSTE",15),width=400,height=50,corner_radius=16,textvariable=s_var)
     entry.place(relx=0.5,anchor="center",rely=0.6)
-    # entry.bind("<KeyRelease>", lambda event: se(s_var, userc,tr,event))
+    entry.bind("<KeyRelease>", lambda event: se(s_var, userc,tr,event))
     tr=cards3(fr2pw,userc)
 def cards3(fr2pw,userc):
-    # pack=openj()
-    # packs=len(readj(pack,userc))
-    # stu=len(un(pack,userc))
+    pack=openj()
+    packs=len(reada(pack,userc))
+    stu=len(un(pack,userc))
+    on=len(readway(pack,userc))
+    de=len(readdeli(pack,userc))
+    s=len(readse(pack,userc))
     fr1=CTkFrame(fr2pw,corner_radius=13,width=130,height=110,fg_color=TEXTS,border_color=FRAMES,border_width=3)
     fr1.place(x=30,y=170)
     fr2=CTkFrame(fr2pw,corner_radius=16,width=130,height=110,fg_color=TEXTS,border_color=FRAMES,border_width=3)
@@ -54,7 +57,7 @@ def cards3(fr2pw,userc):
     lbl1.place(y=100,relx=0.5,anchor="center")
     lbl2=CTkLabel(fr3,text="Delivered",text_color=FRAMES,font=("Pixelhands",15))
     lbl2.place(y=100,relx=0.5,anchor="center")
-    lbl3=CTkLabel(fr4,text="Unknown",text_color=FRAMES,font=("Pixelhands",15))
+    lbl3=CTkLabel(fr4,text="sent",text_color=FRAMES,font=("Pixelhands",15))
     lbl3.place(y=100,relx=0.5,anchor="center")
     tick=load_photo("assests/images/tick.png",fr1,(35,35),widget="label",corner=30)
     tick.place(y=20,x=10)
@@ -64,13 +67,14 @@ def cards3(fr2pw,userc):
     clock.place(y=20,x=10)
     que=load_photo("assests/images/que.png",fr4,(35,35),widget="label",corner=30)
     que.place(y=20,x=10)
-    lbl3=CTkLabel(fr1,text="",text_color=FRAMES,font=("Pixelhands",30))
+    lbl3=CTkLabel(fr1,text=packs,text_color=FRAMES,font=("Pixelhands",30))
     lbl3.place(y=50,x=90)
-    lbl4=CTkLabel(fr2,text="",text_color=FRAMES,font=("Pixelhands",30))
+    lbl4=CTkLabel(fr2,text=on,text_color=FRAMES,font=("Pixelhands",30))
     lbl4.place(y=50,x=90)
-    lbl5=CTkLabel(fr3,text="",text_color=FRAMES,font=("Pixelhands",30))
+    lbl5=CTkLabel(fr3,text=de,text_color=FRAMES,font=("Pixelhands",30))
     lbl5.place(y=50,x=90)
-    lbl6=CTkLabel(fr4,text="",text_color=FRAMES,font=("Pixelhands",30))
+    lbl6=CTkLabel(fr4,text=s,text_color=FRAMES,font=("Pixelhands",30))
     lbl6.place(y=50,x=90)
     tr=treeveiwa(fr2pw,userc)
+    tr.place(relx=0.5, anchor="center", y=650, height=300, width=700)
     return tr

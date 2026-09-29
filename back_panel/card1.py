@@ -54,3 +54,21 @@ def reada(pack,userc):
     for o in pack:
         all.append(o)
     return all
+def readway(pack,userc):
+    way=[]
+    for o in pack:
+        if o["status"]=="on the way":
+            way.append(o)
+    return way
+def readdeli(pack,userc):
+    deli=[]
+    for o in pack:
+        if o["status"]=="delivered":
+            deli.append(o)
+    return deli
+def readse(pack,userc):
+    se=[]
+    for o in pack:
+        if o["status"]=="sent":
+            se.append(o)
+    return se

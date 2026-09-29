@@ -5,6 +5,7 @@ sys.path.insert(0, BASE_DIR)
 from options.back import *
 from _modules import *
 from adminpanel.dashboarda import *
+from adminpanel.status import *
 TEXTS="#5A1E2A"
 FRAMES="#F7F1E5"
 ENTRIE="#89977D"
@@ -24,7 +25,7 @@ def spanned(window,userc):
     lbl=CTkLabel(fr,text="RESPAWNIX",text_color=FRAMES,font=("Pixel O10 Bott",20))
     lbl.place(y=0,x=20)
     lbl1=CTkLabel(fr,text=f"ADMIN * {n}",text_color=FRAMES,font=("Nova Bomb SemBd",20))
-    lbl1.place(y=0,x=800)
+    lbl1.place(y=0,x=700)
     pw=PanedWindow(window,orient="horizontal",bg=FRAMES,sashwidth=5)
     pw.place(relx=0.5,rely=0.5,anchor="center")
     return pw
@@ -43,7 +44,7 @@ def chnageframe1(fr1pw):
 def buttonsfr1(fr1pw,fr2pw,userc,window):
     btn1=CTkButton(fr1pw,text="Dashboard",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50,command=lambda:cleanfr2pwd(fr2pw,userc))
     btn1.place(relx=0.5,anchor="center",y=230)
-    btn2=CTkButton(fr1pw,text="Package",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50)
+    btn2=CTkButton(fr1pw,text="Package",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50,command=lambda:cleanfr2(fr2pw,userc))
     btn2.place(relx=0.5,anchor="center",y=300)
     btn3=CTkButton(fr1pw,text="Search",font=("Nova Bomb SemBd",20),text_color=TEXTS,fg_color=FRAMES,hover_color=HOVER,corner_radius=16,cursor="hand2",width=170,height=50)
     btn3.place(relx=0.5,anchor="center",y=370)
