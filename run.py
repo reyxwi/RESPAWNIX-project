@@ -1,6 +1,6 @@
 import os
 import sys
-BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+BASE_DIR=os.path.dirname((__file__))
 sys.path.insert(0,BASE_DIR)
 from _modules import *
 from auth.signin import setwindow, frames

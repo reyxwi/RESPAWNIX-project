@@ -4,7 +4,6 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.insert(0, BASE_DIR)
 from _modules import *
-from back_panel.card1 import *
 from userpanel.panel_options.deletepack import *
 TEXTS = "#5A1E2A"
 FRAMES = "#F7F1E5"
