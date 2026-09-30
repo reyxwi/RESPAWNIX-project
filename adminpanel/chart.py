@@ -13,6 +13,8 @@ def cleanfc(fr2pw,userc,on,de,s,stu):
         f.destroy()
     chart(fr2pw,on,de,s,stu)
 def chart(fr2pw,on,de,s,stu):
+    lbl=CTkLabel(fr2pw,text="Report of posts ",text_color=FRAMES,font=("Nova Bomb SemBd",40))
+    lbl.place(y=50,relx=0.5,anchor="center")
     fi=plt.Figure(figsize=(5, 4),facecolor=TEXTS)
     a=fi.add_subplot(111)
     lbs=["on the way", "delivered","sent","unknown"]
