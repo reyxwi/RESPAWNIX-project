@@ -16,7 +16,7 @@ def loading_progress(progressbar: CTkProgressBar, txt_lbl: CTkLabel ,window: CTk
         window.after(
             random.randint(1, 100), loading_progress, progressbar, txt_lbl, window,next,mwindow,userc)
     else:
-
+        
         window.destroy()
         mwindow.deiconify()
         next(mwindow,userc)

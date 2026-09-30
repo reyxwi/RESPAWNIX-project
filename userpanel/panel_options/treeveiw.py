@@ -50,7 +50,6 @@ def treeveiw(fr2pw, userc):
     t.column("status", width=100)
     icon = PhotoImage(file="assests/images/box (2).png")
     t.column("#0", width=50)
-    t.column("#0", width=50)
     t.tag_configure("sent",foreground="#536e52")
     t.tag_configure("delivered",foreground="#9c9e4e")
     t.tag_configure("on the way",foreground="#666e80")

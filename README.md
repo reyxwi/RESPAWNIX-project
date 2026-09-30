@@ -59,52 +59,100 @@ The dashboard displays package statistics such as:
 
 ## 📁 Project Structure
 RESPAWNIX/
+RESPAWNIX/
 │
 ├── run.py
 ├── _modules.py
+├── README.md
+├── requirements.txt
+├── .gitignore
 │
 ├── auth/
 │   ├── login.py
 │   ├── signin.py
 │   └── switch.py
 │
-├── admin/
-│   ├── adminpanel.py
+├── adminpanel/
+│   ├── apanel.py
+│   ├── chart.py
+│   ├── dashboarda.py
+│   ├── status.py
 │   └── tree.py
 │
 ├── userpanel/
 │   ├── upanel.py
+│   ├── dashboard.py
 │   ├── logincon.py
 │   ├── time.py
+│   │
 │   └── panel_options/
-│       ├── dashboard.py
 │       ├── addp.py
-│       ├── repack.py
-│       ├── packages.py
+│       ├── dashboard.py
+│       ├── delete.py
 │       ├── deletepack.py
 │       ├── deletere.py
-│       └── search.py
+│       ├── reveiw.py
+│       ├── search.py
+│       └── treeveiw.py
 │
 ├── back_panel/
 │   ├── card1.py
-│   └── logincon.py
+│   ├── confrim.py
+│   ├── empty2.py
+│   ├── logincon.py
+│   ├── numbers.py
+│   └── out.py
+│
+├── back_panela/
+│   └── seaacha.py
+│
+├── loading_page/
+│   ├── main.py
+│   └── back.py
 │
 ├── options/
-│   ├── pack.py
-│   ├── jpack.py
 │   ├── back.py
-│   ├── users.py
-│   └── userlog.py
+│   ├── jpack.py
+│   ├── pack.py
+│   ├── userlog.py
+│   └── users.py
+│
+├── validation/
+│   ├── validation.py
+│   ├── empty.py
+│   └── emptylog.py
 │
 ├── data/
 │   ├── packages.json
 │   └── role.json
 │
 └── assests/
-```
-
----
-
+    ├── fonts/
+    │
+    │   ├── GROSTE.ttf
+    │   ├── Nova Bomb Semi-bold.ttf
+    │   ├── PixelO10Bott-Regular.ttf
+    │
+    │   
+    │
+    ├── images/
+    │   ├── banner.png
+    │   ├── banner2.png
+    │   ├── box.png
+    │   ├── box (2).png
+    │   ├── clock.png
+    │   ├── eye.png
+    │   ├── loading.gif
+    │   ├── log.png
+    │   ├── que.png
+    │   ├── tick.png
+    │   ├── track.png
+    │   ├── tracking.png
+    │   └── user.png
+    │
+    └── sound/
+        ├── error.mp3
+        └── succes.mp3
 ## 🚀 How to Run
 
 Clone the repository:

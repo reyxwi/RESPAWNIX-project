@@ -6,21 +6,21 @@ sys.path.insert(0, BASE_DIR)
 from _modules import *
 from back_panel.card1 import *
 pack=openj()
-def reado(pack,userc):
+def readou(pack,userc):
     packs=[]
     for p in pack:
         if p["username"]==userc["username"]:
             if p["status"]=="on the way":
                 packs.append(p)
     return packs
-def reads(pack,userc):
+def readsu(pack,userc):
     packs=[]
     for p in pack:
         if p["username"]==userc["username"]:
             if p["status"]=="sent":
                 packs.append(p)
     return packs
-def readd(pack,userc):
+def readdu(pack,userc):
     packs=[]
     for p in pack:
         if p["username"]==userc["username"]:

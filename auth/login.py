@@ -5,7 +5,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 sys.path.insert(0, BASE_DIR)
 from _modules import *
 from options.back import *
-from options.userlog import checkuser
 from back_panel.logincon import login
 
 TEXTS = "#5A1E2A"
@@ -43,7 +42,8 @@ def componentsfr1(fr1, switchsignin, window):
         width=250,
         height=40,
         font=("GROSTE", 20),
-        textvariable=user,border_width=0
+        textvariable=user,
+        border_width=0,
     )
     entry1.place(y=230, relx=0.5, anchor="center")
     lbl4 = CTkLabel(fr1, text="Role", text_color=TEXTS, font=("Nova Bomb SemBd", 20))
@@ -63,7 +63,8 @@ def componentsfr1(fr1, switchsignin, window):
         button_hover_color=HOVER,
         dropdown_hover_color=HOVER,
         corner_radius=16,
-        justify="center",border_width=0
+        justify="center",
+        border_width=0,
     )
     combo.set("Who are you?")
     combo.place(relx=0.3, y=300)
@@ -82,7 +83,8 @@ def componentsfr1(fr1, switchsignin, window):
         height=40,
         font=("Arial", 20),
         show="*",
-        textvariable=pas,border_width=0
+        textvariable=pas,
+        border_width=0,
     )
     entry3.place(y=440, relx=0.5, anchor="center")
     btneye = load_photo(

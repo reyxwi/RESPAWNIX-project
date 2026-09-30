@@ -161,7 +161,7 @@ def componentsfr2(fr2):
     )
     lbl1.place(y=50, relx=0.5, anchor="center")
     tracklbl = load_photo(
-        "assests/images/tracking.png", fr2, (300, 200),FRAMES, widget="label"
+        "assests/images/tracking.png", fr2, (300, 200), FRAMES, widget="label"
     )
     tracklbl.place(relx=0.5, anchor="center", y=200)
     lbl1 = CTkLabel(
